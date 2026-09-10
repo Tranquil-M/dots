@@ -1,3 +1,4 @@
+7zip
 adobe-source-code-pro-fonts
 adw-gtk-theme
 awesome-terminal-fonts
@@ -17,6 +18,7 @@ efibootmgr
 equicord-installer-bin
 evtest
 eza
+fd
 firefox
 flatpak
 fwupd
@@ -106,6 +108,7 @@ wtype
 wl-clip-persist-git
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-termfilechooser-hunkyburrito
 xf86-input-libinput
 yazi
 zoxide
