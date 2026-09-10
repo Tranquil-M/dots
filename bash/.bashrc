@@ -1,16 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Ghost Suggestions
-source ~/.ghost.sh
-
-# SSH config
-eval $(ssh-agent -s)
-
-# Put your github private key under ~/.ssh/github and use sudo chown 600 ~/.ssh/github
-ssh-add ~/.ssh/github
-clear
-
 # Initializing applications
 eval "$(zoxide init bash)"
 
