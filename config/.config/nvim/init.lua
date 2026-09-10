@@ -209,6 +209,20 @@ vim.keymap.set('n', '<leader>ed', function()
   })
 end, { desc = "Open Directory in Neo-tree" })
 
+-- Navigate buffers (tabs) using Shift + h/l
+vim.keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Tab" })
+vim.keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Tab" })
+
+-- Close the current buffer/tab
+vim.keymap.set("n", "<S-x>", function() 
+  local current_buf = vim.api.nvim_get_current_buf()
+
+  vim.cmd 'bprevious'
+
+  vim.api.nvim_buf_delete(current_buf, { force = false} )
+
+end, { desc = "Close Current Tab" })
+
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config {
