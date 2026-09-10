@@ -152,6 +152,18 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function() vim.hl.on_yank() end,
 })
 
+vim.api.nvim_create_autocmd("BufLeave", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype == "lazygit" then
+      local success, events = pcall(require, "neo-tree.events")
+      if success then
+        events.fire_event(events.GIT_EVENT)
+      end
+    end
+  end,
+})
+
 vim.api.nvim_create_autocmd('BufEnter', {
   callback = function(args)
     local current = args.buf
