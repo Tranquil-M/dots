@@ -45,6 +45,22 @@ vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = "Cancel Highlight Search" })
 
+vim.keymap.set('n', '<leader>bh', function ()
+  local lines = math.floor(vim.o.lines * 0.2)
+
+  vim.cmd(lines .. "split | terminal")
+
+  vim.opt_local.buflisted = false
+end, { desc = "Open [B]ash terminal [H]orizontally split" })
+
+vim.keymap.set('n', '<leader>bv', function ()
+  local columns = math.floor(vim.o.columns * 0.2)
+
+  vim.cmd(columns .. "vsplit | terminal")
+
+  vim.opt_local.buflisted = false
+end, { desc = "Open [B]ash terminal [v]orizontally split" })
+
 vim.keymap.set('n', '<leader>ee', '<cmd>Neotree toggle<CR>', { silent = true, desc = 'Toggle Neo-tree' })
 vim.keymap.set('n', '<leader>ed', function()
   require("telescope.builtin").find_files({
