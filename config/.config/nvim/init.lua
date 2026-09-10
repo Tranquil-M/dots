@@ -45,6 +45,12 @@ vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = "Cancel Highlight Search" })
 
+vim.keymap.set('n', '<C-Up>', ':resize +2<CR>', { silent = true })
+vim.keymap.set('n', '<C-Down>', ':resize -2<CR>', { silent = true })
+
+vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', { silent = true })
+vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', { silent = true })
+
 vim.keymap.set('n', '<leader>bh', function ()
   local lines = math.floor(vim.o.lines * 0.2)
 
@@ -139,7 +145,16 @@ vim.api.nvim_create_autocmd("BufEnter", {
   callback = function(args)
     local current = args.buf
 
-    -- Only run for actual files
+    local buftype = vim.bo[current].buftype
+    if buftype ~= "" then
+      return
+    end
+
+    local filetype = vim.bo[current].filetype
+    if filetype == "neo-tree" or filetype == "" then
+      return
+    end
+
     if vim.api.nvim_buf_get_name(current) == "" then
       return
     end
