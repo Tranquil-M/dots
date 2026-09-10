@@ -50,6 +50,10 @@ for FIREFOX_DIR in "${FIREFOX_DIRS[@]}"; do
             echo 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);' >> "$PROFILE/user.js"
         fi
 
+        if ! grep -q "widget.use-xdg-desktop-portal.file-picker" "$PROFILE/user.js"; then
+            echo 'user_pref("widget.use-xdg-desktop-portal.file-picker", 1);' >> "$PROFILE/user.js"
+        fi
+
         substep "Cleanup"
         rm -rf "$TEMP_THEME"
     done
