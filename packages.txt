@@ -40,6 +40,7 @@ iwd
 jq
 jvol-git
 kitty
+lazygit
 less
 localsend-bin
 lsp-plugins
