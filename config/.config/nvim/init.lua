@@ -196,7 +196,11 @@ vim.keymap.set('n', '<leader>ed', function()
         actions.close(prompt_bufnr)
 
         if selection then
-          vim.cmd("Neotree " .. selection.value)
+          local target_dir = selection.value
+
+          vim.api.nvim_set_current_dir(target_dir)
+          vim.cmd("Neotree " .. target_dir)
+
         end
 
       end)
