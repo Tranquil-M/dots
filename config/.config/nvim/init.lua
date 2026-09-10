@@ -65,7 +65,7 @@ vim.keymap.set('n', '<leader>bv', function ()
   vim.cmd(columns .. "vsplit | terminal")
 
   vim.opt_local.buflisted = false
-end, { desc = "Open [B]ash terminal [v]orizontally split" })
+end, { desc = "Open [B]ash terminal [V]ertically split" })
 
 vim.keymap.set('n', '<leader>ee', '<cmd>Neotree toggle<CR>', { silent = true, desc = 'Toggle Neo-tree' })
 vim.keymap.set('n', '<leader>ed', function()
