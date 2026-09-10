@@ -1,5 +1,3 @@
--- [[ Setting Globals ]]
-
 -- leader key, must be defined before plugins load
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -9,9 +7,6 @@ vim.g.have_nerd_font = true
 
 -- options
 require 'config.options'
-
--- use the + register, and use vim.schedule to bypass race conditions and optimize boot times for nvim (vim.opt.clipboard scans for clipboard programs)
-vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
 -- [[ Basic Keymaps ]]
 

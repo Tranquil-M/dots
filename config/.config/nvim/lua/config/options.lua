@@ -27,3 +27,6 @@ vim.opt.splitright = true
 vim.opt.timeoutlen = 300
 vim.opt.undofile = true
 vim.opt.updatetime = 250
+
+-- use the + register, and use vim.schedule to bypass race conditions and optimize boot times for nvim (vim.opt.clipboard scans for clipboard programs)
+vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
