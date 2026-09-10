@@ -4,7 +4,7 @@ source "scripts/ui.sh"
 
 info "Setting defaults..."
 
-xdg-mime default org.gnome.Nautilus.desktop inode/directory
+xdg-mime default yazi.desktop inode/directory
 xdg-mime default firefox.desktop x-scheme-handler/http
 xdg-mime default firefox.desktop x-scheme-handler/https
 sudo systemctl enable --now greetd
