@@ -177,6 +177,34 @@ vim.opt.softtabstop = 3  -- Number of spaces that a <Tab> counts for while perfo
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Neotree toggle
+vim.keymap.set('n', '<leader>ee', '<Cmd>Neotree toggle<CR>', { silent = true, desc = 'Toggle Neo-tree' })
+
+-- Neotree directory open
+vim.keymap.set('n', '<leader>ed', function()
+  require("telescope.builtin").find_files({
+    prompt_tile = "Neo-tree: Open Directory",
+    cwd = "~",
+    find_command = { "fd", "--type", "d", "--hidden", "--absolute-path", "--exclude", ".git" , "--exclude", ".cache", "--exclude", "node_modules", "--exclude", ".npm"},
+
+    attach_mappings = function(prompt_bufnr, map)
+      local actions = require("telescope.actions")
+      local action_state = require("telescope.actions.state")
+
+      actions.select_default:replace(function()
+        local selection = action_state.get_selected_entry()
+        actions.close(prompt_bufnr)
+
+        if selection then
+          vim.cmd("Neotree " .. selection.value)
+        end
+
+      end)
+      return true
+    end,
+  })
+end, { desc = "Open Directory in Neo-tree" })
+
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config {

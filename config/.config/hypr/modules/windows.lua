@@ -77,7 +77,7 @@ hl.window_rule({
   pin = true,
 
   size = { "monitor_w * 0.25", "monitor_h * 0.25" },
-  move = { "(monitor_w - (window_w * 1.1))", "(monitor_h - (window_h * 1.25))" },
+  move = { "(monitor_w - (window_w * 0.1))", "(monitor_h - (window_h * 0.25))" },
 
   animation = "slide right",
 })
