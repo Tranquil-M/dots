@@ -49,7 +49,6 @@ markdownlint-cli
 meson
 mpv
 mpvpaper
-nautilus
 neovim
 networkmanager
 fastfetch
