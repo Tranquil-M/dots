@@ -1,16 +1,20 @@
 return {
-  {
-    "daedlock/matugen.nvim",
-    lazy = false,
-    priority = 1000,
+  'daedlock/matugen.nvim',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require('matugen').setup {
+      colors_path = '~/.config/nvim/colors.json',
+    }
 
-    config = function()
+    vim.cmd.colorscheme 'matugen'
 
-      require("matugen").setup({
-        colors_path = vim.fn.expand("~/.config/nvim/matugen.json"),
-      })
+    local sigusr1 = assert(vim.loop.new_signal())
 
-      vim.cmd.colorscheme("matugen")
-    end,
-  },
+    vim.loop.signal_start(sigusr1, 'sigusr1', function()
+      vim.schedule(function()
+        vim.defer_fn(function() vim.cmd.colorscheme 'matugen' end, 50)
+      end)
+    end)
+  end,
 }

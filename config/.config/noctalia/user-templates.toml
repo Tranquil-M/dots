@@ -3,10 +3,10 @@ input_path = '~/.config/noctalia/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 post_hook = 'pkill -SIGUSR2 btop || true'
 
-[theme.templates.user.nvim]
-input_path = '~/.config/noctalia/templates/nvim.json'
-output_path = '~/.config/nvim/matugen.json'
-post_hook = 'pkill -SIGUSR1 nvim'
+[theme.templates.user.neovim]
+input_path = "~/.config/noctalia/templates/nvim-colors.json"
+output_path = "~/.config/nvim/colors.json"
+post_hook = "pkill -SIGUSR1 nvim"
 
 [theme.templates.user.websites-mozilla]
 input_path = "~/.config/noctalia/templates/firefox-colors.css"
