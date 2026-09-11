@@ -21,6 +21,9 @@ return {
     formatters_by_ft = {
       python = { 'ruff', 'black' },
       lua = { 'stylua' },
+      html = { 'prettier' },
+      css = { 'prettier' },
+      javascript = { 'prettier' },
     },
   },
 }
