@@ -25,7 +25,7 @@ stow config
 
 substep "Applying ssh config... (This will not be linked to the dotfile directory.)"
 mkdir -p $HOME/.ssh
-cp ssh/. $HOME/.ssh/
+cp -r ssh/. $HOME/.ssh/
 
 if [[ -d "~/.local/share/icons/DOT-dark" ]]; then
     substep "Resetting Mouse Cursor Theme..."
