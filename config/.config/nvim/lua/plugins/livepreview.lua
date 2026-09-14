@@ -3,5 +3,7 @@ return {
   dependencies = {
     'nvim-telescope/telescope.nvim',
   },
-  opts = {},
+  require('livepreview.config').set {
+    dynamic_root = true,
+  },
 }

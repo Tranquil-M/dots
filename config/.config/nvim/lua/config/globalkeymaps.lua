@@ -99,6 +99,7 @@ vim.keymap.set('n', '<leader>rs', function()
   if path == '' then return end
 
   vim.cmd.LivePreview { 'start', path }
+  print(path)
 end, { desc = 'Start Live Rendering Server' })
 
 vim.keymap.set('n', '<leader>rc', '<cmd>LivePreview close<cr>', { desc = 'Close Live Rendering Server' })
