@@ -55,7 +55,7 @@ vim.keymap.set('n', '<leader>ed', function()
           local target_dir = selection.value
 
           vim.api.nvim_set_current_dir(target_dir)
-          vim.cmd('Neotree ' .. target_dir)
+          vim.cmd.Neotree { target_dir }
         end
       end)
       return true
@@ -86,7 +86,21 @@ vim.diagnostic.config {
 }
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
-vim.keymap.set('n', '<leader>rs', '<cmd>LivePreview start<cr>', { desc = 'Start Live Rendering Server' })
+vim.keymap.set('n', '<leader>rs', function()
+  local current = vim.api.nvim_get_current_buf()
+
+  local buftype = vim.bo[current].buftype
+  if buftype ~= '' then return end
+
+  local filetype = vim.bo[current].filetype
+  if filetype == 'neo-tree' or filetype == '' then return end
+
+  local path = vim.fn.expand(vim.api.nvim_buf_get_name(current))
+  if path == '' then return end
+
+  vim.cmd.LivePreview { 'start', path }
+end, { desc = 'Start Live Rendering Server' })
+
 vim.keymap.set('n', '<leader>rc', '<cmd>LivePreview close<cr>', { desc = 'Close Live Rendering Server' })
 
 -- works on my machine! (kitty)
