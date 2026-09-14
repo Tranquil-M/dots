@@ -46,6 +46,7 @@ return {
         { '<leader>e', group = '[E]xplorer' },
         { '<leader>l', group = '[L]azy Git' },
         { '<leader>b', group = '[B]ash Terminal' },
+        { '<leader>r', group = '[R]ender Live' },
         { 'gr', group = 'LSP Actions', mode = { 'n' } },
       },
     },
