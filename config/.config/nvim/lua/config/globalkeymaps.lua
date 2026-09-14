@@ -86,6 +86,9 @@ vim.diagnostic.config {
 }
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+vim.keymap.set('n', '<leader>rs', '<cmd>LivePreview start<cr>', { desc = 'Start Live Rendering Server' })
+vim.keymap.set('n', '<leader>rc', '<cmd>LivePreview close<cr>', { desc = 'Close Live Rendering Server' })
+
 -- works on my machine! (kitty)
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
