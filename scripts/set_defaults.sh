@@ -9,7 +9,7 @@ xdg-mime default firefox.desktop x-scheme-handler/http
 xdg-mime default firefox.desktop x-scheme-handler/https
 sudo systemctl enable --now greetd
 sudo systemctl enable --now power-profiles-daemon.service
-sudo systemctl --user enabled --now opentabletdriver
+sudo systemctl --user enable --now opentabletdriver
 sudo systemctl --user restart xdg-desktop-portal.service
 sudo systemctl --user restart xdg-desktop-portal-termfilechooser.service
 sudo usermod -a -G input $USER
