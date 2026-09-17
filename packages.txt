@@ -61,6 +61,7 @@ cliphist
 wlsunset
 nwg-displays
 nwg-look
+opentabletdriver
 otf-font-awesome
 pacman-contrib
 pipewire-pulse
@@ -106,6 +107,7 @@ unzip
 webapp-manager
 wtype
 wl-clip-persist-git
+xournalpp
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-termfilechooser-hunkyburrito
