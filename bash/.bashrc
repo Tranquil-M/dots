@@ -30,7 +30,9 @@ alias f="yazi"
 # nice to have anyway
 if command -v pacman >/dev/null 2>&1; then
   alias rmorphans='sudo pacman -Rns $(pacman -Qdtq)'
-  alias update="yay -Syyu; flatpak update"
+  alias update="yay -Syyu; flatpak update; rmorphans"
+
+  # fzf search cmds
   alias pacfind="pacman -Slq | fzf --preview-window=down:25% --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
   alias yayfind="yay -Slq | fzf --preview-window=down:25% --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
   alias pacrm="pacman -Qq | fzf --preview-window=down:25% --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
