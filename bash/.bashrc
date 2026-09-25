@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# export path vars
+export PATH="~/.cargo/bin:~/.local/bin:$PATH"
+
 # Initializing applications
 eval "$(zoxide init bash)"
 
