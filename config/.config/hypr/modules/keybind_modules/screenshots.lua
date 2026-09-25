@@ -8,7 +8,7 @@ local function snap(mode)
 
 	local template = [[
     grimblast save %s "%s" && \
-    (mpv "$HOME/.config/hypr/sfx/camera-shutter.mp3" &) && \
+    (mpv --volume=65 "$HOME/.config/hypr/sfx/camera-shutter.mp3" &) && \
     res=$(notify-send "Screenshot Captured" "Click to annotate" -i "%s" --wait --action="default=edit") && \
     [ "$res" = "default" ] && satty --filename "%s"
     ]]
