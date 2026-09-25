@@ -6,6 +6,7 @@ export PATH="~/.cargo/bin:~/.local/bin:$PATH"
 
 # Initializing applications
 eval "$(zoxide init bash)"
+eval "$(starship init bash)"
 
 # Aliases
 

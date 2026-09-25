@@ -83,6 +83,7 @@ gst-plugins-bad
 gst-plugins-ugly
 ripgrep
 satty
+starship
 stow
 steam
 slurp
