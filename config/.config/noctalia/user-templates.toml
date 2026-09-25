@@ -8,6 +8,10 @@ input_path = "~/.config/noctalia/templates/nvim-colors.json"
 output_path = "~/.config/nvim/colors.json"
 post_hook = "pkill -SIGUSR1 nvim"
 
+[theme.templates.user.starship]
+input_path = "~/.config/noctalia/templates/starship-colors.toml"
+output_path = "~/.config/starship.toml"
+
 [theme.templates.user.websites-mozilla]
 input_path = "~/.config/noctalia/templates/firefox-colors.css"
 output_path = "~/.mozilla/firefox/colors.css"
