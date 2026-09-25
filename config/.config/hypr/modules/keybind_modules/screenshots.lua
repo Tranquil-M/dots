@@ -2,21 +2,27 @@
 local mainMod = "SUPER"
 local ipc = "noctalia msg"
 
--- Execution
-hl.bind(mainMod .. " + z", function()
+-- Helper funs
+local function snap(mode)
 	local file_path = os.getenv("HOME") .. "/Pictures/Screenshots/Screenshot_" .. os.date("%Y-%m-%d_%H-%M-%S") .. ".png"
 
-	local cmd = "grimblast save area "
-		.. file_path
-		.. " && mpv "
-		.. os.getenv("HOME")
-		.. "/.config/hypr/sfx/camera-shutter.mp3 && notify-send 'Screenshot Taken' 'Saved to Pictures' -i "
-		.. file_path
+	local template = [[
+    grimblast save %s "%s" && \
+    (mpv "$HOME/.config/hypr/sfx/camera-shutter.mp3" &) && \
+    res=$(notify-send "Screenshot Captured" "Click to annotate" -i "%s" --wait --action="default=edit") && \
+    [ "$res" = "default" ] && satty --filename "%s"
+    ]]
+
+	local cmd = string.format(template, mode, file_path, file_path, file_path)
 
 	hl.dispatch(hl.dsp.exec_cmd(cmd))
+end
+
+-- Execution
+hl.bind(mainMod .. " + z", function()
+	snap("area")
 end)
 
-hl.bind(
-	mainMod .. " + SHIFT + z",
-	hl.dsp.exec_cmd(ipc .. " plugin alexander/screen-toolkit:service all annotateFullscreen")
-)
+hl.bind(mainMod .. " + SHIFT + z", function()
+	snap("output")
+end)
