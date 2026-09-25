@@ -26,9 +26,18 @@ alias vim="nvim"
 alias n="nvim"
 alias v="nvim"
 
-# file browser alises
-alias y="yazi"
-alias f="yazi"
+# file browser aliases and wrappers
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+alias yazi="y"
+alias f="y"
 
 # arch specific aliases; not technically needed as dotfiles only applicable for archlinux
 # nice to have anyway
