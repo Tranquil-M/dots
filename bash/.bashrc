@@ -44,5 +44,8 @@ fi
 # This line is here to mimic the windows powershell startup; uncomment it if you want that
 # echo "Arch Linux $(uname -r); echo User $USER of Static Hostname $(cat /etc/hostname)"
 
+# This line is here to display fastfetch aswell as the current user pfp; path is configurable but is designed to work with noctalia
+fastfetch
+
 # Customizing user prompt
 PS1='\W > '

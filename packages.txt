@@ -29,6 +29,7 @@ gifski
 glm
 greetd
 grim
+grimblast-git
 hyprland
 hyprpicker
 hyprcap
