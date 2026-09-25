@@ -1,0 +1,23 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+      "type": "auto",
+      "source": "$HOME/.pfp.jpg",
+      "width": 23,
+      "height": 10
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "kernel",
+    "uptime",
+    "shell",
+    "de",
+    "wm",
+    "terminal",
+    "cpu",
+    "gpu",
+    "break"
+  ]
+}
