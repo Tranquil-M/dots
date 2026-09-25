@@ -4,6 +4,7 @@ local ipc = "noctalia msg"
 
 -- Helper funs
 local function snap(mode)
+	os.execute("mkdir $HOME/Pictures/Screenshots -p")
 	local file_path = os.getenv("HOME") .. "/Pictures/Screenshots/Screenshot_" .. os.date("%Y-%m-%d_%H-%M-%S") .. ".png"
 
 	local template = [[
