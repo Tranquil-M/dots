@@ -8,7 +8,7 @@ local function snap(mode)
 	local file_path = os.getenv("HOME") .. "/Pictures/Screenshots/Screenshot_" .. os.date("%Y-%m-%d_%H-%M-%S") .. ".png"
 
 	local template = [[
-    grimblast copysave %s "%s" && \
+    grimblast copysave --freeze %s "%s" && \
     (mpv --volume=65 "$HOME/.config/hypr/sfx/camera-shutter.mp3" &) && \
     res=$(notify-send "Screenshot Captured" "Click to annotate" -i "%s" --wait --action="default=edit") && \
     [ "$res" = "default" ] && satty --filename "%s"

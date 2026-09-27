@@ -3,18 +3,19 @@ $directory$git_branch$rust$python
 $character'''
 
 palette = 'colors'
+add_newline = false
 
 [palettes.colors]
 mustard = '#af8700' # example
-color1 = '#bcc7de'
-color2 = '#273143'
-color3 = '#c5c6cd'
-color4 = '#131315'
-color5 = '#273143'
+color1 = '#c5c4db'
+color2 = '#2e2f41'
+color3 = '#c8c5cd'
+color4 = '#141315'
+color5 = '#2e2f41'
 color6 = '#000000'
 color7 = '#000000'
-color8 = '#bcc7de'
-color9 = '#dcbed3'
+color8 = '#c5c4db'
+color9 = '#ddbecd'
 
 # Prompt symbols 
 [character]
