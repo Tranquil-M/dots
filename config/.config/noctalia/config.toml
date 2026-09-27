@@ -122,7 +122,7 @@ item_spacing = 0
 main_axis_padding = 2
 
 [hooks]
-started = "notify-send \"You have $(pacman -Qu | wc -l) package updates waiting for you!\""
+started = "until ping -c 1 8.8.8.8 >/dev/null 2>&1; do sleep 2; done; notify-send \"You have $(( $(checkupdates 2>/dev/null | wc -l) + $(yay -Qua 2>/dev/null | wc -l) + $(flatpak remote-ls --updates 2>/dev/null | wc -l) )) updates waiting for you!\""
 
 [idle]
 behavior_order = [ "Sleep Warning", "lock", "screen-off", "lock-and-suspend" ]
@@ -293,7 +293,7 @@ position_vertical = "center_right"
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [ "thepunkoff/pomodoro", "alexander/screen-toolkit", "whyoolw/dropwall" ]
+enabled = [ "thepunkoff/pomodoro", "alexander/screen-toolkit", "whyoolw/dropwall", "tadomika_ari/w-engine" ]
 
     [[plugins.source]]
     kind = "git"
@@ -306,7 +306,7 @@ enabled = [ "thepunkoff/pomodoro", "alexander/screen-toolkit", "whyoolw/dropwall
     name = "community"
 
 [shell]
-avatar_path = "/home/beepew/.pfp"
+avatar_path = "/home/beepew/.pfp.jpg"
 password_style = "random"
 polkit_agent = true
 time_format = "{:%I:%M}"
@@ -376,7 +376,6 @@ time_format = "{:%I:%M}"
 [theme]
 builtin = "Ayu"
 community_palette = "Oxocarbon"
-mode = "dark"
 pure_black_dark = true
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
@@ -390,10 +389,14 @@ wallpaper_scheme = "m3-content"
         output_path = "~/.config/btop/themes/matugen.theme"
         post_hook = "pkill -SIGUSR2 btop || true"
 
-        [theme.templates.user.nvim]
-        input_path = "~/.config/noctalia/templates/nvim.json"
-        output_path = "~/.config/nvim/matugen.json"
+        [theme.templates.user.neovim]
+        input_path = "~/.config/noctalia/templates/nvim-colors.json"
+        output_path = "~/.config/nvim/colors.json"
         post_hook = "pkill -SIGUSR1 nvim"
+
+        [theme.templates.user.starship]
+        input_path = "~/.config/noctalia/templates/starship-colors.toml"
+        output_path = "~/.config/starship.toml"
 
         [theme.templates.user.websites-mozilla]
         input_path = "~/.config/noctalia/templates/firefox-colors.css"
@@ -404,16 +407,16 @@ wallpaper_scheme = "m3-content"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Whirl Of Clouds.png"
+    path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Whirl Of Clouds.png"
+    path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Whirl Of Clouds.png"
+    path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/beepew/Pictures/Wallpapers/Whirl Of Clouds.png"
+    path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
@@ -422,10 +425,10 @@ transition_on_startup = true
     wallpaper_scheme = "m3-content"
 
     [[wallpaper.favorite]]
-    builtin_palette = "Ayu"
-    palette_source = "builtin"
+    palette_source = "wallpaper"
     path = "/home/beepew/Pictures/Wallpapers/Kittyboard.png"
-    theme_mode = "auto"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
 
     [[wallpaper.favorite]]
     path = "/home/beepew/Pictures/Wallpapers/Heavy Clouds.jpg"

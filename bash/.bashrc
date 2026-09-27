@@ -26,6 +26,9 @@ alias vim="nvim"
 alias n="nvim"
 alias v="nvim"
 
+# lazygit aliase
+alias lg="lazygit"
+
 # file browser aliases and wrappers
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
