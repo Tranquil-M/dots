@@ -18,21 +18,21 @@ Welcome to...
 
 | Desktop | Launcher |
 | :---: | :---: |
-| ![Desktop](https://github.com/Tranquil-M/dots/blob/master/Sample/Window.png?raw=true) | ![Launcher](https://github.com/Tranquil-M/dots/blob/master/Sample/Launcher.png?raw=true) |
+| ![Desktop](Sample/Window.png) | ![Launcher](Sample/Launcher.png) |
 
 |  Wallpaper Selector | Notification Manager |
 | :---: | :---: |
-| ![Wallpaper Selector](https://github.com/Tranquil-M/dots/blob/master/Sample/Wallpaper%20Selector.png?raw=true) | ![Notification Manager](https://github.com/Tranquil-M/dots/blob/master/Sample/Notification%20Center.png?raw=true) |
+| ![Wallpaper Selector](Sample/Wallpaper%20Selector.png) | ![Notification Manager](Sample/Notification%20Center.png) |
 
 | Lock Manager | Settings |
 | :---: | :---: |
-| ![Lock Manager](https://github.com/Tranquil-M/dots/blob/master/Sample/Lock%20Manager.png?raw=true) | ![Settings](https://github.com/Tranquil-M/dots/blob/master/Sample/Settings.png?raw=true) |
+| ![Lock Manager](Sample/Lock%20Manager.png) | ![Settings](Sample/Settings.png) |
 
 ## Color Examples
 
 | Minecraft Purple | Anord Pink | Cat Club Green |
 | :---: | :---: | :---: |
-| ![Purple](https://github.com/Tranquil-M/dots/blob/master/Sample/Purple.png?raw=true) | ![Pink](https://github.com/Tranquil-M/dots/blob/master/Sample/Pink.png?raw=true) | ![Green](https://github.com/Tranquil-M/dots/blob/master/Sample/Green.png?raw=true) |
+| ![Purple](Sample/Purple.png) | ![Pink](Sample/Pink.png) | ![Green](Sample/Green.png) |
 
 > [!NOTE]
 > All wallpaper colors are completely adaptive! It changes everything, all just depends on what wallpaper you are using.
