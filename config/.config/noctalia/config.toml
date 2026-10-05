@@ -402,7 +402,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "discord", "obsidian" ]
+    community_ids = [ "pywalfox", "discord", "obsidian", "yazi" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
@@ -428,10 +428,10 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
 
     [wallpaper.monitors.DP-1]
     path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
@@ -440,7 +440,7 @@ transition_on_startup = true
     path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
 
 [widget.clock]
 format = "{:%I:%M}"
