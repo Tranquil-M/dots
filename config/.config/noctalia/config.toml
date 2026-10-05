@@ -157,6 +157,7 @@ auto_locate = true
 blur_intensity = 0.79999998211860657
 blurred_desktop = true
 tint_intensity = 0.53999998793005943
+transition = []
 
 [lockscreen_widgets]
 enabled = false
