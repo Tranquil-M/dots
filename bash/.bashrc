@@ -45,7 +45,7 @@ alias f="y"
 # arch specific aliases; not technically needed as dotfiles only applicable for archlinux
 # nice to have anyway
 if command -v pacman >/dev/null 2>&1; then
-  alias rmorphans='sudo pacman -Rns $(pacman -Qdtq)'
+  alias rmorphans='sudo pacman -Rns $(pacman -Qdtq) 2>/dev/null'
   alias update="yay -Syyu; flatpak update; rmorphans"
 
   # fzf search cmds
