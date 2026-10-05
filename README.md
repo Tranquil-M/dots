@@ -60,10 +60,9 @@ Welcome to...
 **Dotfiles installer**
 1. Verifies dependencies, operation system, and internet connection.
 2. Installs all the neccessary packages from `packages.txt` in the project root.
-3. Asks the user if they want to install am SDDM theme. This will clone [`Darkkal44's qylock`](https://github.com/Darkkal44/qylock) and run the corresponding installation script.
+3. Sets up `noctalia`'s integrated greetd theme.
 5. Sets default file manager, browser, etc.
-6. Overwrites the current configuration in place with the new one, all synced with GNU stow.
-7. Runs post-installation script such as persistent workspace creation.
+6. Overwrites the current configuration in place with the new one, synced with GNU stow.
 
 >[!NOTE]
 >The curl entry point is completely optional, and serves as a wrapper for ease of use.
@@ -73,7 +72,7 @@ Welcome to...
 
 These dotfiles are meant to be simple and practical for daily use, with some additional features:
 
-- Screenshot utility using Grim, Slurp, and Satty  
+- Screenshot utility using Grimblast and Satty  
   Saves to: `~/Pictures/Screenshots`
 - Noctalia
     - Wallpaper switcher
@@ -89,7 +88,6 @@ These dotfiles are meant to be simple and practical for daily use, with some add
 - Exa
 - Zoxide
 - Firefox theme using pywal-fox and custom css  
-- Qylock customizable sddm themes
 
 <a name="binds"></a>
 ## Keybindings
@@ -98,21 +96,23 @@ These dotfiles are meant to be simple and practical for daily use, with some add
 - Super + Space → Open launcher
 - Super + C → Open control center
 - Super + S → Open settings
-- Super + M → Open media panel
 - Super + N → Open notification history
-- Super + X → Open emoji selector via launcher
-- Super + V → Open clipboard history via launcher
 - Super + B → Open battery panel
-- Alt + Tab → Tab Switcher
+- Super + Backspace → Lock manager
 
 ### System
 - Super + A → Toggle Bar Visibility
+- Close laptop lid → lock and suspend
 
 ### Applications
 - Super + Enter → Open terminal
-- Super + Shift + F → Open file manager
 - Super + E → Toggle wallpaper
-
+- Super + X → Toggle emoji picker
+- Super + V → Toggle clipboard
+- Super + M → Toggle media
+- Super + D → Toggle calendar
+- ALT + Tab → Window switcher
+ 
 ### Media controls
 - Volume up key → Increase volume
 - Volume down key → Decrease volume
@@ -127,38 +127,41 @@ These dotfiles are meant to be simple and practical for daily use, with some add
 - Super + Z → Capture selected area
 - Super + Shift + Z → Capture full screen
 
-### Window management
-- Super + W → Close active window
-- Super + T → Toggle floating window
-- Super + Backspace → Open session menu
-- Super + F → Fullscreen mode
-- Super + Alt + F → Exit fullscreen mode
+### Window Management
+* Super + H → Focus window left
+* Super + L → Focus window right
+* Super + J → Focus window up
+* Super + K → Focus window down
+* Super + Left Arrow → Focus window left
+* Super + Right Arrow → Focus window right
+* Super + Up Arrow → Focus window up
+* Super + Down Arrow → Focus window down
 
-### Notifications
-- Super + Comma → Remove oldest notification
-- Super + Shift + Comma → Clear all notifications
+* Super + Shift + H → Move window left
+* Super + Shift + L → Move window right
+* Super + Shift + K → Move window up
+* Super + Shift + J → Move window down
+* Super + Shift + Left Arrow → Move window left
+* Super + Shift + Right Arrow → Move window right
+* Super + Shift + Up Arrow → Move window up
+* Super + Shift + Down Arrow → Move window down
 
-### Focus navigation
-- Super + Arrow keys → Move focus between windows
+* Super + Left Click → Drag/move window
+* Super + Right Click → Resize window
 
-### Move windows
-- Super + Shift + Arrow keys → Move window in direction
+* Super + W → Close active window
+* Super + Shift + W → Force-close active window
+* Super + T → Toggle floating mode, center window, and resize floating windows
+* Super + F → Toggle maximized mode
+* Super + Alt + F → Toggle fullscreen mode
 
 ### Workspaces
 - Super + 1–0 → Switch to workspace 1–10
 - Super + Shift + 1–0 → Move window to workspace 1–10
-- Super + Mouse wheel → Switch workspaces
 
 ### Mouse actions
 - Super + Left click drag → Move window
 - Super + Right click drag → Resize window
-
-### Window switching
-- Alt + Tab → Next window
-- Alt + Shift + Tab → Previous window
-
-### Laptop
-- Close lid → Lock screen and suspend system
 
 > [!NOTE]
 > Temporary workspaces are supported, but a minimum of 3 persistent workspaces are assigned per-monitor on startup.
@@ -171,15 +174,12 @@ These dotfiles are meant to be simple and practical for daily use, with some add
 * [`GNU Stow`](https://www.gnu.org/software/stow/)
 * [`Equibop`](https://equicord.org/)
 * [`Exa`](https://github.com/ogham/exa)
-* [`Grim`](https://github.com/emersion/grim)
-* [`Kickstart`](https://github.com/nvim-lua/kickstart.nvim)
+* [`Grimblast`](https://github.com/hyprwm/contrib/tree/main/grimblast)
 * [`Kitty`](https://sw.kovidgoyal.net/kitty/)
 * [`Little Fox`](https://github.com/biglavis/LittleFox)
 * [`Matugen Templates`](https://github.com/InioX/matugen-themes)
 * [`Pywal-Fox`](https://addons.mozilla.org/en-US/firefox/addon/pywalfox/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 * [`Satty`](https://github.com/Satty-org/Satty)
-* [`Qylock`](https://github.com/Darkkal44/qylock)
-* [`Slurp`](https://github.com/emersion/slurp)
 * [`Zoxide`](https://github.com/ajeetdsouza/zoxide)
 * [`Noctalia`](https://noctalia.dev/)
 
