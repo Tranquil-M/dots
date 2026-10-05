@@ -30,7 +30,7 @@ Welcome to...
 
 ## Color Examples
 
-| Minecraft Purple | Anord Pink | Cat Club Green |
+| Minecraft Purple | Hometown Pink | Cat Club Green |
 | :---: | :---: | :---: |
 | ![Purple](Sample/Purple.png) | ![Pink](Sample/Pink.png) | ![Green](Sample/Green.png) |
 
