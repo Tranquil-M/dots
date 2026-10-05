@@ -128,32 +128,32 @@ These dotfiles are meant to be simple and practical for daily use, with some add
 - Super + Shift + Z → Capture full screen
 
 ### Window Management
-* Super + H → Focus window left
-* Super + L → Focus window right
-* Super + J → Focus window up
-* Super + K → Focus window down
-* Super + Left Arrow → Focus window left
-* Super + Right Arrow → Focus window right
-* Super + Up Arrow → Focus window up
-* Super + Down Arrow → Focus window down
+- Super + H → Focus window left
+- Super + L → Focus window right
+- Super + J → Focus window up
+- Super + K → Focus window down
+- Super + Left Arrow → Focus window left
+- Super + Right Arrow → Focus window right
+- Super + Up Arrow → Focus window up
+- Super + Down Arrow → Focus window down
 
-* Super + Shift + H → Move window left
-* Super + Shift + L → Move window right
-* Super + Shift + K → Move window up
-* Super + Shift + J → Move window down
-* Super + Shift + Left Arrow → Move window left
-* Super + Shift + Right Arrow → Move window right
-* Super + Shift + Up Arrow → Move window up
-* Super + Shift + Down Arrow → Move window down
+- Super + Shift + H → Move window left
+- Super + Shift + L → Move window right
+- Super + Shift + K → Move window up
+- Super + Shift + J → Move window down
+- Super + Shift + Left Arrow → Move window left
+- Super + Shift + Right Arrow → Move window right
+- Super + Shift + Up Arrow → Move window up
+- Super + Shift + Down Arrow → Move window down
 
-* Super + Left Click → Drag/move window
-* Super + Right Click → Resize window
+- Super + Left Click → Drag/move window
+- Super + Right Click → Resize window
 
-* Super + W → Close active window
-* Super + Shift + W → Force-close active window
-* Super + T → Toggle floating mode, center window, and resize floating windows
-* Super + F → Toggle maximized mode
-* Super + Alt + F → Toggle fullscreen mode
+- Super + W → Close active window
+- Super + Shift + W → Force-close active window
+- Super + T → Toggle floating mode, center window, and resize floating windows
+- Super + F → Toggle maximized mode
+- Super + Alt + F → Toggle fullscreen mode
 
 ### Workspaces
 - Super + 1–0 → Switch to workspace 1–10
