@@ -43,7 +43,8 @@ for FIREFOX_DIR in "${FIREFOX_DIRS[@]}"; do
         cp "$TEMP_THEME/userChrome.css" "$PROFILE/chrome/"
 
         substep "Creating user.js file"
-        touch "$PROFILE/user.js"
+        rm -f "$PROFILE/user.js"
+        curl -L -o "$PROFILE/user.js" "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js"
 
         substep "Applying user.js configuration"
         if ! grep -q "toolkit.legacyUserProfileCustomizations.stylesheets" "$PROFILE/user.js"; then
