@@ -67,6 +67,10 @@ for FIREFOX_DIR in "${FIREFOX_DIRS[@]}"; do
             echo 'user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000028");' >> "$PROFILE/user.js"
         fi
 
+        if ! grep -q "browser.nova.enabled" "$PROFILE/user.js"; then
+            echo 'user_pref("browser.nova.enabled", false);' >> "$PROFILE/user.js"
+        fi
+
         substep "Cleanup"
         rm -rf "$TEMP_THEME"
     done
