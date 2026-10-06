@@ -42,17 +42,29 @@ for FIREFOX_DIR in "${FIREFOX_DIRS[@]}"; do
         substep "Creating userChrome.css file"
         cp "$TEMP_THEME/userChrome.css" "$PROFILE/chrome/"
 
-        substep "Creating user.js file"
+        substep "Creating Betterfox user.js file"
+        echo ""
         rm -f "$PROFILE/user.js"
         curl -L -o "$PROFILE/user.js" "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js"
+        echo ""
 
-        substep "Applying user.js configuration"
+        substep "Applying additional user.js configuration"
+
         if ! grep -q "toolkit.legacyUserProfileCustomizations.stylesheets" "$PROFILE/user.js"; then
             echo 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);' >> "$PROFILE/user.js"
         fi
 
         if ! grep -q "widget.use-xdg-desktop-portal.file-picker" "$PROFILE/user.js"; then
             echo 'user_pref("widget.use-xdg-desktop-portal.file-picker", 1);' >> "$PROFILE/user.js"
+        fi
+
+        if ! grep -q "network.trr.mode" "$PROFILE/user.js"; then
+            echo 'user_pref("network.trr.mode", 2);' >> "$PROFILE/user.js"
+            echo 'user_pref("network.trr.max-fails", 5);' >> "$PROFILE/user.js"
+        fi
+
+        if ! grep -q "network.trr.uri" "$PROFILE/user.js"; then
+            echo 'user_pref("network.trr.uri", "https://dns.dnswarden.com/00000000000000000000028");' >> "$PROFILE/user.js"
         fi
 
         substep "Cleanup"
