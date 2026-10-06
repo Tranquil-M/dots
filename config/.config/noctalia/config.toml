@@ -359,7 +359,7 @@ time_format = "{:%I:%M}"
     list_item_background = true
     session_placement = "floating"
     session_position = "center"
-    transparency_mode = "soft"
+    transparency_mode = "solid"
     wallpaper_placement = "floating"
     wallpaper_position = "center"
 
@@ -415,7 +415,7 @@ time_format = "{:%I:%M}"
 [theme]
 builtin = "Ayu"
 community_palette = "Oxocarbon"
-pure_black_dark = true
+pure_black_dark = false
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
 
