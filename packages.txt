@@ -106,6 +106,7 @@ translate-shell
 tesseract
 tlp
 udisks2
+udiskie
 unzip
 webapp-manager
 wtype

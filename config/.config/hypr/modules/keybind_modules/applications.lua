@@ -12,4 +12,5 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /emo "
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(ipc .. " panel-toggle clipboard"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(ipc .. " panel-toggle control-center media"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(ipc .. " panel-toggle control-center calendar"))
+hl.bind(mainMod .. " + U", hl.dsp.exec_cmd(ipc .. " panel-toggle aristides/udiskie:manager"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. " window-switcher"))
