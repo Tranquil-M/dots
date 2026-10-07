@@ -1,8 +1,8 @@
-[filechooser]
+[Filechooser]
 cmd=yazi-wrapper.sh
 default_dir=$HOME
 open_mode=suggested
 save_mode=last
 
-[env]
+[Env]
 TERMCMD=kitty
