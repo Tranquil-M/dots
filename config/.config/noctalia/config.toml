@@ -330,11 +330,22 @@ orientation = "vertical"
 position = "bottom_center"
 position_vertical = "center_right"
 
+[plugin_settings."aristides/udiskie"]
+auto_open_filemanager = true
+manager_open_near_click = true
+manager_placement = "attached"
+
 [plugin_settings."whyoolw/dropwall"]
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [ "thepunkoff/pomodoro", "alexander/screen-toolkit", "whyoolw/dropwall", "tadomika_ari/w-engine" ]
+enabled = [
+    "thepunkoff/pomodoro",
+    "alexander/screen-toolkit",
+    "whyoolw/dropwall",
+    "tadomika_ari/w-engine",
+    "aristides/udiskie"
+]
 
     [[plugins.source]]
     kind = "git"
@@ -433,7 +444,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "discord", "obsidian", "yazi" ]
+    community_ids = [ "pywalfox", "discord", "obsidian" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
@@ -454,15 +465,19 @@ wallpaper_scheme = "m3-content"
         output_path = "~/.mozilla/firefox/colors.css"
         post_hook = "sh ~/.config/noctalia/scripts/install_website_colors.sh"
 
+        [theme.templates.user.yazi]
+        input_path = "~/.config/noctalia/templates/yazi-theme.toml"
+        output_path = "~/.config/yazi/theme.toml"
+
 [wallpaper]
 directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Landscapes/Cloudy Peaks.jpg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Landscapes/Cloudy Peaks.jpg"
 
     [wallpaper.monitors.DP-1]
     path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
@@ -471,7 +486,7 @@ transition_on_startup = true
     path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Landscapes/Cloudy Peaks.jpg"
 
 [widget.clock]
 format = "{:%I:%M}"

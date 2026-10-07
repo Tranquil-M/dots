@@ -105,7 +105,6 @@ ttf-symbola
 translate-shell
 tesseract
 tlp
-udev-block-notify
 udisks2
 unzip
 webapp-manager
