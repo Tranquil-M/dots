@@ -11,15 +11,17 @@ order = [ "default" ]
     capsule_radius = 8
     capsule_thickness = 0.69999998807907104
     center = [ "taskbar" ]
+    concave_edge_corners = false
     end = [ "group:g2", "group:g1" ]
-    margin_ends = 250
+    margin_ends = 0
     padding = 10
-    radius = 10
-    radius_top_left = 15
-    radius_top_right = 15
+    position = "bottom"
+    radius = 0
+    radius_top_left = 0
+    radius_top_right = 0
     scale = 0.95000000670552254
     start = [ "workspaces" ]
-    thickness = 30
+    thickness = 40
     widget_spacing = 10
 
         [[bar.default.capsule_group]]
@@ -54,7 +56,7 @@ enabled = true
 [control_center]
 sidebar = "full"
 sidebar_section = "full"
-width = 870
+width = 1000
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -346,6 +348,8 @@ enabled = [ "thepunkoff/pomodoro", "alexander/screen-toolkit", "whyoolw/dropwall
 
 [shell]
 avatar_path = "/home/beepew/.pfp.jpg"
+corner_radius_scale = 0.0
+panel_anchor_bar = "default"
 password_style = "random"
 polkit_agent = true
 time_format = "{:%I:%M}"
@@ -354,13 +358,20 @@ time_format = "{:%I:%M}"
     categories = false
 
     [shell.panel]
-    control_center_placement = "floating"
+    clipboard_placement = "attached"
+    control_center_placement = "attached"
     control_center_position = "center"
+    launcher_placement = "attached"
     list_item_background = true
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    open_near_click_launcher = true
+    open_near_click_wallpaper = true
+    polkit_placement = "attached"
     session_placement = "floating"
     session_position = "center"
     transparency_mode = "solid"
-    wallpaper_placement = "floating"
+    wallpaper_placement = "attached"
     wallpaper_position = "center"
 
     [shell.screen_corners]
@@ -415,6 +426,7 @@ time_format = "{:%I:%M}"
 [theme]
 builtin = "Ayu"
 community_palette = "Oxocarbon"
+mode = "dark"
 pure_black_dark = false
 source = "wallpaper"
 wallpaper_scheme = "m3-content"
@@ -472,7 +484,7 @@ anchor = true
 icon_scale = 1.3500000000000001
 item_spacing = 10
 show_all_outputs = true
-show_window_title = true
+show_window_title = false
 
 [widget.tray]
 drawer = true
