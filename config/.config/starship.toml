@@ -7,15 +7,15 @@ add_newline = false
 
 [palettes.colors]
 mustard = '#af8700' # example
-color1 = '#a5c8ff'
-color2 = '#00315e'
-color3 = '#c1c6d3'
-color4 = '#111419'
-color5 = '#00315e'
-color6 = '#000000'
-color7 = '#000000'
-color8 = '#a5c8ff'
-color9 = '#f4aeff'
+color1 = '#bcc7de'
+color2 = '#273143'
+color3 = '#c5c6cd'
+color4 = '#1f1f21'
+color5 = '#273143'
+color6 = '#131315'
+color7 = '#131315'
+color8 = '#bcc7de'
+color9 = '#dcbed3'
 
 # Prompt symbols 
 [character]

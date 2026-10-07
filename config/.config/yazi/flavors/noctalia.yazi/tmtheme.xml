@@ -18,19 +18,19 @@
         <key>settings</key>
         <dict>
           <key>background</key>
-          <string>#000000</string>
+          <string>#131315</string>
           <key>foreground</key>
           <string>#e4e2e3</string>
           <key>caret</key>
           <string>#e4e2e3</string>
           <key>lineHighlight</key>
-          <string>#373a3e</string>
+          <string>#45474c</string>
           <key>misspelling</key>
           <string>#ffb4ab</string>
           <key>accent</key>
           <string>#bcc7de</string>
           <key>selection</key>
-          <string>#28282940</string>
+          <string>#35353640</string>
           <key>activeGuide</key>
           <string>#45474c</string>
           <key>findHighlight</key>

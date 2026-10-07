@@ -1,5 +1,5 @@
 {
-  "Revision": "0.6.7",
+  "Revision": "0.6.7-r258.g06e07f5f",
   "Profiles": [
     {
       "Tablet": "Wacom CTL-472",
@@ -12,9 +12,9 @@
       "AbsoluteModeSettings": {
         "Display": {
           "Width": 1920.0,
-          "Height": 1080.0,
-          "X": 2880.0,
-          "Y": 540.0,
+          "Height": 1280.0,
+          "X": 960.0,
+          "Y": 640.0,
           "Rotation": 0.0
         },
         "Tablet": {
@@ -86,6 +86,7 @@
         "WheelBindings": [],
         "DisablePressure": false,
         "DisableTilt": false,
+        "DisableRotation": false,
         "EnableDragBindings": false
       }
     }

@@ -7,7 +7,7 @@
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Portrait"/>
   <property name="lastSavePath" value="/home/beepew/Downloads"/>
-  <property name="lastOpenPath" value="/home/beepew/HW/raw_pdfs"/>
+  <property name="lastOpenPath" value="/home/beepew/School/Homework/XPP"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
@@ -240,11 +240,11 @@
       <attribute name="size" type="string" value="MEDIUM"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff00c0ff"/>
+      <attribute name="color" type="hex" value="ff3333cc"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="BIG"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject"/>
