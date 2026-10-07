@@ -4,6 +4,7 @@ adw-gtk-theme
 awesome-terminal-fonts
 base
 base-devel
+bat
 bluez-utils
 blueman
 brightnessctl
