@@ -335,17 +335,14 @@ auto_open_filemanager = true
 manager_open_near_click = true
 manager_placement = "attached"
 
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/beepew/Pictures/Wallpapers/Animated"
+
 [plugin_settings."whyoolw/dropwall"]
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [
-    "thepunkoff/pomodoro",
-    "alexander/screen-toolkit",
-    "whyoolw/dropwall",
-    "tadomika_ari/w-engine",
-    "aristides/udiskie"
-]
+enabled = [ "thepunkoff/pomodoro", "aristides/udiskie", "noctalia/mpvpaper" ]
 
     [[plugins.source]]
     kind = "git"
@@ -477,7 +474,7 @@ transition_on_startup = true
     path = "/home/beepew/Pictures/Wallpapers/Landscapes/Cloudy Peaks.jpg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Landscapes/Cloudy Peaks.jpg"
+    path = "/home/beepew/.cache/noctalia/mpvpaper/_home_beepew_Pictures_Wallpapers_Animated_Winter_and_Cat_mp4.jpg"
 
     [wallpaper.monitors.DP-1]
     path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
@@ -486,7 +483,7 @@ transition_on_startup = true
     path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Landscapes/Cloudy Peaks.jpg"
+    path = "/home/beepew/.cache/noctalia/mpvpaper/_home_beepew_Pictures_Wallpapers_Animated_Winter_and_Cat_mp4.jpg"
 
 [widget.clock]
 format = "{:%I:%M}"
