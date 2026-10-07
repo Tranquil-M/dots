@@ -17,3 +17,6 @@ input_path = "~/.config/noctalia/templates/firefox-colors.css"
 output_path = "~/.mozilla/firefox/colors.css"
 post_hook = 'sh ~/.config/noctalia/scripts/install_website_colors.sh'
 
+[theme.templates.user.yazi]
+input_path = "~/.config/noctalia/templates/yazi-theme.toml"
+output_path = "~/.config/yazi/theme.toml"
