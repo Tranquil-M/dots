@@ -1,6 +1,6 @@
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 INSTALLERS="$SCRIPT_DIR/scripts"
-cd $SCRIPT_DIR
+cd "$SCRIPT_DIR" || exit
 
 source "scripts/ui.sh"
 

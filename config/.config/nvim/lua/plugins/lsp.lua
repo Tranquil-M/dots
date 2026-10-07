@@ -72,6 +72,7 @@ return {
       html = {},
       pyright = {},
       stylua = {}, -- Used to format Lua code
+      bashls = {},
       lua_ls = {
         on_init = function(client)
           client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
