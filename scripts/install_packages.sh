@@ -86,19 +86,37 @@ Operation = Install
 Operation = Upgrade
 Type = Package
 Target = discord
-Target = equicord-installer-bin
 
 [Action]
 Description = Patching discord...
 When = PostTransaction
-Exec = /usr/bin/equilotl -install -install-openasar -location "$HOME/.config/discord"
+Exec = /usr/bin/runuser -u $USER -- /usr/bin/systemctl --user start equilotl.service
 EOF
 
 success "Installed Hook"
 
-info "Updating discord..."
-install_pkg discord
-success "Discord updated!"
+info "Creating systemd service for patching Equilotl"
+
+mkdir -p "$HOME/.config/systemd/user"
+
+tee "$HOME/.config/systemd/user/equilotl.service" >/dev/null <<EOF
+[Unit]
+Description=Patch Discord with Equicord
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/equilotl -install -branch stable
+EOF
+
+success "Created Service!"
+
+info "Reloading systemd services..."
+systemctl --user daemon-reload
+success "Systemd services reloaded!"
+
+info "Patching discord..."
+systemctl --user start equilotl.service
+success "Discord patched!"
 
 info "Checking for orphaned packages..."
 

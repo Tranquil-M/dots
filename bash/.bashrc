@@ -2,7 +2,7 @@
 [[ $- != *i* ]] && return
 
 # export path vars
-export PATH="~/.cargo/bin:~/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
 # Initializing applications
 eval "$(zoxide init bash)"
