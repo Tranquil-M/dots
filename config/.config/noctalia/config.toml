@@ -396,9 +396,9 @@ time_format = "{:%I:%M}"
 
     [shell.panel]
     clipboard_placement = "attached"
-    control_center_placement = "attached"
+    control_center_placement = "floating"
     control_center_position = "bottom_center"
-    launcher_placement = "attached"
+    launcher_placement = "floating"
     launcher_position = "bottom_center"
     list_item_background = true
     open_near_click_clipboard = true
@@ -548,7 +548,7 @@ type = "custom_button"
 capsule = true
 capsule_opacity = 0.80000000000000004
 capsule_padding = 8
-format = "{:%d %m}"
+format = "{:%m %d}"
 
 [widget.launcher]
 capsule = true
