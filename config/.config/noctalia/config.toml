@@ -395,11 +395,13 @@ time_format = "{:%I:%M}"
     categories = false
 
     [shell.panel]
+    borders = false
     clipboard_placement = "attached"
     control_center_placement = "floating"
-    control_center_position = "bottom_center"
+    control_center_position = "bottom_left"
+    floating_offset = 0
     launcher_placement = "floating"
-    launcher_position = "bottom_center"
+    launcher_position = "center_left"
     list_item_background = true
     open_near_click_clipboard = true
     open_near_click_control_center = true
@@ -408,7 +410,7 @@ time_format = "{:%I:%M}"
     polkit_placement = "attached"
     session_placement = "floating"
     session_position = "center"
-    transparency_mode = "glass"
+    transparency_mode = "soft"
     wallpaper_placement = "attached"
     wallpaper_position = "center"
 
