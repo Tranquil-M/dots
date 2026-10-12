@@ -3,6 +3,10 @@ input_path = '~/.config/noctalia/templates/btop.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 post_hook = 'pkill -SIGUSR2 btop || true'
 
+[theme.templates.user.discord-midnight]
+input_path = "~/.config/noctalia/templates/midnight-discord.css"
+output_path = "~/.config/Equicord/themes/midnight-discord.css"
+
 [theme.templates.user.neovim]
 input_path = "~/.config/noctalia/templates/nvim-colors.json"
 output_path = "~/.config/nvim/colors.json"

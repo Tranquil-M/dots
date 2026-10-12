@@ -24,6 +24,7 @@ return {
       html = { 'prettier' },
       css = { 'prettier' },
       javascript = { 'prettier' },
+      bash = { 'shfmt' },
     },
   },
 }

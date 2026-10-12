@@ -105,11 +105,14 @@ return {
       },
     }
 
+    -- Use this to install any mason packages
+    -- I use this largely for installing formatters
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'ruff',
       'black',
       'prettier',
+      'shfmt',
     })
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }

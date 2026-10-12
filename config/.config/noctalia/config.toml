@@ -471,12 +471,16 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "discord", "obsidian" ]
+    community_ids = [ "pywalfox", "gimp", "obsidian", "prismlauncher", "obs", "bat", "lazygit" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
         output_path = "~/.config/btop/themes/matugen.theme"
         post_hook = "pkill -SIGUSR2 btop || true"
+
+        [theme.templates.user.discord-midnight]
+        input_path = "~/.config/noctalia/templates/midnight-discord.css"
+        output_path = "~/.config/Equicord/themes/midnight-discord.css"
 
         [theme.templates.user.neovim]
         input_path = "~/.config/noctalia/templates/nvim-colors.json"
