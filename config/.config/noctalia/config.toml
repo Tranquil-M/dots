@@ -35,7 +35,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "notifications", "network", "volume", "session" ]
+        members = [ "notifications", "bluetooth", "network", "volume", "session" ]
         opacity = 0.80000001192092896
         padding = 8.0
         radius = 50.0
@@ -527,7 +527,10 @@ transition_on_startup = true
     path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
 
 [widget.audio_visualizer]
+bands = 30
 interactive = false
+mirrored = false
+show_when_idle = true
 
 [widget.cat]
 audio_spectrum = true
