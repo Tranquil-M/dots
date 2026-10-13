@@ -35,7 +35,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "notifications", "bluetooth", "network", "volume", "session" ]
+        members = [ "notifications", "network", "battery", "volume", "session" ]
         opacity = 0.80000001192092896
         padding = 8.0
         radius = 50.0
@@ -404,10 +404,10 @@ time_format = "{:%I:%M}"
     clipboard_placement = "floating"
     clipboard_position = "center_left"
     control_center_placement = "floating"
-    control_center_position = "bottom_left"
+    control_center_position = "bottom_right"
     floating_offset = 0
     launcher_placement = "floating"
-    launcher_position = "center_left"
+    launcher_position = "bottom_right"
     list_item_background = true
     open_near_click_clipboard = false
     open_near_click_control_center = true
@@ -479,7 +479,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "gimp", "obsidian", "prismlauncher", "fastfetch", "obs", "bat", "lazygit" ]
+    community_ids = [ "pywalfox", "gimp", "obsidian", "prismlauncher", "obs", "bat", "lazygit" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
@@ -513,10 +513,10 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
 
     [wallpaper.monitors.DP-1]
     path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
