@@ -27,6 +27,10 @@ xournal = [
     { run = "xournalpp %s", orphan = true }
 ]
 
+satty = [
+    { run = "satty --filename %s", orphan = true, for = "unix" }
+]
+
 [open]
 rules = [
 
@@ -35,5 +39,6 @@ rules = [
 	{ mime = "video/*", use = "play" },
     # ]]]
 
+	{ mime = "image/*", use = "satty" },
     { url = "*.xopp", use = "xournal" }
 ]
