@@ -13,6 +13,7 @@ order = [ "default" ]
     capsule_thickness = 0.69999998807907104
     center = [ "group:g2", "group:g3" ]
     concave_edge_corners = true
+    contact_shadow = true
     end = [ "cat", "audio_visualizer", "media", "weather", "group:g1" ]
     margin_ends = 0
     padding = 10
@@ -189,6 +190,8 @@ transition = []
 enabled = true
 schema_version = 2
 widget_order = [
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@HDMI-A-1",
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-0000000000000001",
     "lockscreen-widget-0000000000000002",
@@ -230,7 +233,7 @@ widget_order = [
 
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
-    box_width = 816.0
+    box_width = 810.0
     cx = 960.0
     cy = 1018.0
     output = "HDMI-A-1"
@@ -346,6 +349,8 @@ widget_order = [
 enabled = true
 
 [notification]
+background_opacity = 0.79999998211860657
+border = false
 max_visible = 5
 offset_y = 10
 
@@ -473,7 +478,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "gimp", "obsidian", "prismlauncher", "obs", "bat", "lazygit" ]
+    community_ids = [ "pywalfox", "gimp", "obsidian", "prismlauncher", "fastfetch", "obs", "bat", "lazygit" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
@@ -507,19 +512,22 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/beepew/Pictures/Wallpapers/Kitty.jpg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
 
     [wallpaper.monitors.eDP-1]
     path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
+
+[widget.audio_visualizer]
+interactive = false
 
 [widget.cat]
 audio_spectrum = true
@@ -544,6 +552,7 @@ type = "custom_button"
 
 [widget.custom_button_3]
 glyph = "calendar"
+interactive = false
 type = "custom_button"
 
 [widget.date]
