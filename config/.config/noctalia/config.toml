@@ -401,14 +401,15 @@ time_format = "{:%I:%M}"
 
     [shell.panel]
     borders = false
-    clipboard_placement = "attached"
+    clipboard_placement = "floating"
+    clipboard_position = "center_left"
     control_center_placement = "floating"
     control_center_position = "bottom_left"
     floating_offset = 0
     launcher_placement = "floating"
     launcher_position = "center_left"
     list_item_background = true
-    open_near_click_clipboard = true
+    open_near_click_clipboard = false
     open_near_click_control_center = true
     open_near_click_launcher = true
     open_near_click_wallpaper = true
@@ -416,8 +417,8 @@ time_format = "{:%I:%M}"
     session_placement = "floating"
     session_position = "center"
     transparency_mode = "soft"
-    wallpaper_placement = "attached"
-    wallpaper_position = "center"
+    wallpaper_placement = "floating"
+    wallpaper_position = "top_left"
 
     [shell.screen_corners]
     enabled = true
@@ -512,16 +513,16 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
 
     [wallpaper.monitors.eDP-1]
     path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
