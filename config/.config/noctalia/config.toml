@@ -512,16 +512,16 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Cozy/Train.jpg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Cat/Kittyboard.png"
 
     [wallpaper.monitors.eDP-1]
     path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
@@ -549,11 +549,13 @@ capsule_padding = 8
 format = "{:%I %M}"
 
 [widget.custom_button_2]
+color = "primary"
 glyph = "clock-filled"
 interactive = false
 type = "custom_button"
 
 [widget.custom_button_3]
+color = "primary"
 glyph = "calendar"
 interactive = false
 type = "custom_button"
@@ -576,6 +578,9 @@ capsule_padding = 8
 
 [widget.network]
 show_label = false
+
+[widget.session]
+color = "primary"
 
 [widget.taskbar]
 anchor = true
