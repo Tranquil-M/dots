@@ -24,3 +24,8 @@ post_hook = 'sh ~/.config/noctalia/scripts/install_website_colors.sh'
 [theme.templates.user.yazi]
 input_path = "~/.config/noctalia/templates/yazi-theme.toml"
 output_path = "~/.config/yazi/theme.toml"
+
+[theme.templates.user.obsidian]
+input_path = "~/.config/noctalia/templates/obsidian.css"
+output_path_dynamic = "bash ~/.config/noctalia/scripts/apply_obsidian.sh output"
+post_hook = "bash ~/.config/noctalia/scripts/apply_obsidian.sh apply"
