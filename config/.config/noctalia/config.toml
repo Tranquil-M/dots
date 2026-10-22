@@ -35,7 +35,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "notifications", "widget_2", "network", "battery", "volume", "session" ]
+        members = [ "notifications", "bluetooth", "network", "volume", "session" ]
         opacity = 0.80000001192092896
         padding = 8.0
         radius = 50.0
@@ -371,7 +371,7 @@ video_directory = "/home/beepew/Pictures/Wallpapers/Animated"
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [ "thepunkoff/pomodoro", "aristides/udiskie", "noctalia/mpvpaper", "noctalia/bongocat" ]
+enabled = [ "thepunkoff/pomodoro", "aristides/udiskie", "noctalia/bongocat", "tadomika_ari/w-engine" ]
 
     [[plugins.source]]
     kind = "git"
@@ -399,6 +399,7 @@ time_format = "{:%I:%M}"
 
     [shell.launcher]
     categories = false
+    layout = "simple"
 
     [shell.panel]
     borders = false
@@ -480,7 +481,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "gimp", "prismlauncher", "obs", "bat", "lazygit" ]
+    community_ids = [ "pywalfox", "gimp", "prismlauncher", "fastfetch", "obs", "bat", "lazygit" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
@@ -519,16 +520,16 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Dreemurr.jpeg"
 
     [wallpaper.last]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
+    path = "/home/beepew/.local/share/Steam/steamapps/workshop/content/431960/3356432625/preview.gif"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/.local/share/Steam/steamapps/workshop/content/431960/3356432625/preview.gif"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Hometown.jpeg"
+    path = "/home/beepew/.local/share/Steam/steamapps/workshop/content/431960/3356432625/preview.gif"
 
     [wallpaper.monitors.eDP-1]
     path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
