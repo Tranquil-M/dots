@@ -81,6 +81,7 @@ gst-plugins-base
 gst-plugins-good
 gst-plugins-bad
 gst-plugins-ugly
+linux-wallpaperengine-git
 ripgrep
 satty
 starship
