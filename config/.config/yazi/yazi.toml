@@ -24,7 +24,7 @@ edit = [
 # ]]]
 
 xournal = [
-    { run = "xournalpp %s", orphan = true }
+    { run = "xournalpp %s", orphan = true, for = "unix" }
 ]
 
 satty = [
