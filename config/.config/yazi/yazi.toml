@@ -40,5 +40,7 @@ rules = [
     # ]]]
 
 	{ mime = "image/*", use = "satty" },
+    { mime = "inode/{x-empty,empty}", use = "edit" },
+    { mime = "application/pdf", use = "xournal" },
     { url = "*.xopp", use = "xournal" }
 ]
