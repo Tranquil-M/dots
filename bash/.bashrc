@@ -45,13 +45,14 @@ alias f="y"
 # arch specific aliases; not technically needed as dotfiles only applicable for archlinux
 # nice to have anyway
 if command -v pacman >/dev/null 2>&1; then
-  alias rmorphans='sudo pacman -Rns $(pacman -Qdtq)'
-  alias update="yay -Syyu; flatpak update; rmorphans"
+	alias rmorphans='sudo pacman -Rns $(pacman -Qdtq)'
+	alias update="yay -Syyu; flatpak update; rmorphans"
+	alias chupd='until ping -c 1 8.8.8.8 >/dev/null; do sleep 2; done; echo "You have $(($(checkupdates 2>/dev/null | wc -l) + $(yay -Qua 2>/dev/null | wc -l) + $(flatpak remote-ls --updates 2>/dev/null | wc -l))) updates waiting for you!"'
 
-  # fzf search cmds
-  alias pacfind="pacman -Slq | fzf --preview-window=down:25% --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
-  alias yayfind="yay -Slq | fzf --preview-window=down:25% --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
-  alias pacrm="pacman -Qq | fzf --preview-window=down:25% --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+	# fzf search cmds
+	alias pacfind="pacman -Slq | fzf --preview-window=down:25% --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+	alias yayfind="yay -Slq | fzf --preview-window=down:25% --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
+	alias pacrm="pacman -Qq | fzf --preview-window=down:25% --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
 fi
 
 # This line is here to mimic the windows powershell startup; uncomment it if you want that
