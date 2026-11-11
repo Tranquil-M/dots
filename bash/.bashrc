@@ -31,10 +31,11 @@ alias lg="lazygit"
 
 # file browser aliases and wrappers
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	local tmp
+	tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	command yazi "$@" --cwd-file="$tmp"
 	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
+		builtin cd -- "$cwd" || return
 	fi
 	rm -f -- "$tmp"
 }
@@ -47,7 +48,29 @@ alias f="y"
 if command -v pacman >/dev/null 2>&1; then
 	alias rmorphans='sudo pacman -Rns $(pacman -Qdtq)'
 	alias update="yay -Syyu; flatpak update; rmorphans"
-	alias chupd='until ping -c 1 8.8.8.8 >/dev/null; do sleep 2; done; echo "You have $(($(checkupdates 2>/dev/null | wc -l) + $(yay -Qua 2>/dev/null | wc -l) + $(flatpak remote-ls --updates 2>/dev/null | wc -l))) updates waiting for you!"'
+
+	function chupd() {
+		# wait until wifi connected via pinging cloudflare servers
+		until ping -c 1 8.8.8.8 >/dev/null; do
+			sleep 2
+		done
+
+		local upd=()
+
+		# grab all updates from official, aur, and flatpak then toss them into an array
+		mapfile -t upd < <(
+			checkupdates
+			yay -Qua
+			flatpak remote-ls --updates
+		)
+
+		# print all updates out
+		echo -e "Found updates:\n"
+		printf '%s\n' "${upd[@]}"
+
+		# count all items in the array
+		echo -e "\nYou have ${#upd[@]} total updates waiting for you!"
+	}
 
 	# fzf search cmds
 	alias pacfind="pacman -Slq | fzf --preview-window=down:25% --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
