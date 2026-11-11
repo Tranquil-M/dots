@@ -64,12 +64,11 @@ if command -v pacman >/dev/null 2>&1; then
 			flatpak remote-ls --updates
 		)
 
-		# print all updates out
-		echo -e "Found updates:\n"
-		printf '%s\n' "${upd[@]}"
+		# print count of updates
+		echo -e "Found ${#upd[@]} updates:"
 
-		# count all items in the array
-		echo -e "\nYou have ${#upd[@]} total updates waiting for you!"
+		# print all updates out seperated by newlines
+		printf '%s\n' "${upd[@]}"
 	}
 
 	# fzf search cmds
