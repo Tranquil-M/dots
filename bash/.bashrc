@@ -58,17 +58,31 @@ if command -v pacman >/dev/null 2>&1; then
 		local upd=()
 
 		# grab all updates from official, aur, and flatpak then toss them into an array
-		mapfile -t upd < <(
+		mapfile -t official_upd < <(
 			checkupdates
+		)
+
+		mapfile -t aur_upd < <(
 			yay -Qua
+		)
+
+		mapfile -t flatpak_upd < <(
 			flatpak remote-ls --updates
 		)
 
-		# print count of updates
-		echo -e "Found ${#upd[@]} updates:"
+		printf "%s\n" \
+			"-- TOTAL UPDATES: $((${#official_upd[@]} + ${#aur_upd[@]} + ${#flatpak_upd[@]}))  --" \
+			"" \
+			"-- Official [${#official_upd[@]}] --" \
+			"${official_upd[@]}" \
+			"" \
+			"-- AUR [${#aur_upd[@]}] --" \
+			"${aur_upd[@]}" \
+			"" \
+			"-- Flatpak [${#flatpak_upd[@]}] --" \
+			"${flatpak_upd[@]}" |
+			less
 
-		# print all updates out seperated by newlines
-		printf '%s\n' "${upd[@]}"
 	}
 
 	# fzf search cmds
