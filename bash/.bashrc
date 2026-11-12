@@ -40,7 +40,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias yazi="y"
 alias f="y"
 
 # arch specific aliases; not technically needed as dotfiles only applicable for archlinux
@@ -70,6 +69,7 @@ if command -v pacman >/dev/null 2>&1; then
 			flatpak remote-ls --updates
 		)
 
+		# count updates and print them neatly; pipe into less for simple viewing
 		printf "%s\n" \
 			"-- TOTAL UPDATES: $((${#official_upd[@]} + ${#aur_upd[@]} + ${#flatpak_upd[@]}))  --" \
 			"" \
