@@ -1,14 +1,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# export path vars
+# -- Env --
 export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 
-# Initializing applications
+# -- Initializing applications --
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
-# Aliases
+# -- Aliases --
 
 # ls
 alias ls='eza -l'
@@ -26,7 +26,7 @@ alias vim="nvim"
 alias n="nvim"
 alias v="nvim"
 
-# lazygit aliase
+# lazygit alias
 alias lg="lazygit"
 
 # file browser aliases and wrappers
@@ -41,6 +41,8 @@ function y() {
 }
 
 alias f="y"
+
+# -- Package Management --
 
 # arch specific aliases; not technically needed as dotfiles only applicable for archlinux
 # nice to have anyway
@@ -105,4 +107,5 @@ fi
 fastfetch
 
 # Customizing user prompt
-PS1='\W > '
+# redundant with starship
+# PS1='\W > '
