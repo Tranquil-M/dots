@@ -69,9 +69,16 @@ if command -v pacman >/dev/null 2>&1; then
 			flatpak remote-ls --updates
 		)
 
+		TOTAL=$((${#official_upd[@]} + ${#aur_upd[@]} + ${#flatpak_upd[@]}))
+
+		if (($TOTAL <= 0)); then
+			echo "No available updates."
+			return
+		fi
+
 		# count updates and print them neatly; pipe into less for simple viewing
 		printf "%s\n" \
-			"-- TOTAL UPDATES: $((${#official_upd[@]} + ${#aur_upd[@]} + ${#flatpak_upd[@]}))  --" \
+			"-- TOTAL UPDATES: $TOTAL  --" \
 			"" \
 			"-- Official [${#official_upd[@]}] --" \
 			"${official_upd[@]}" \
@@ -81,7 +88,7 @@ if command -v pacman >/dev/null 2>&1; then
 			"" \
 			"-- Flatpak [${#flatpak_upd[@]}] --" \
 			"${flatpak_upd[@]}" |
-			less
+			less -F || echo
 
 	}
 
