@@ -29,3 +29,8 @@ output_path = "~/.config/yazi/theme.toml"
 input_path = "~/.config/noctalia/templates/obsidian.css"
 output_path_dynamic = "bash ~/.config/noctalia/scripts/apply_obsidian.sh output"
 post_hook = "bash ~/.config/noctalia/scripts/apply_obsidian.sh apply"
+
+[theme.templates.user.steam]
+input_path = '~/.config/noctalia/templates/steam.css'
+output_path = '~/.config/AdwSteamGtk/custom.css'
+post_hook =  'adwaita-steam-gtk -i'
