@@ -1,7 +1,6 @@
 7zip
 adobe-source-code-pro-fonts
 adw-gtk-theme
-adksteamgtk
 awesome-terminal-fonts
 base
 base-devel
@@ -49,6 +48,7 @@ lsp-plugins
 luarocks
 markdownlint-cli
 meson
+millennium
 mpv
 mpvpaper
 neovim

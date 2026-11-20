@@ -33,9 +33,9 @@ order = [ "default" ]
         accordion_direction = "end"
         border_width = 1.0
         enabled = true
-        fill = "surface_variant"
+        fill = "surface_container"
         id = "g1"
-        members = [ "notifications", "bluetooth", "network", "volume", "session" ]
+        members = [ "notifications", "widget_2", "network", "battery", "volume", "session" ]
         opacity = 0.80000001192092896
         padding = 8.0
         radius = 50.0
@@ -45,7 +45,7 @@ order = [ "default" ]
         accordion_direction = "end"
         border_width = 1.0
         enabled = true
-        fill = "surface_variant"
+        fill = "surface_container"
         id = "g2"
         members = [ "custom_button_2", "clock" ]
         opacity = 1.0
@@ -57,7 +57,7 @@ order = [ "default" ]
         accordion_direction = "end"
         border_width = 1.0
         enabled = true
-        fill = "surface_variant"
+        fill = "surface_container"
         id = "g3"
         members = [ "custom_button_3", "date" ]
         opacity = 1.0
@@ -194,9 +194,7 @@ widget_order = [
     "lockscreen-login-box@HDMI-A-1",
     "lockscreen-login-box@eDP-1",
     "lockscreen-widget-0000000000000001",
-    "lockscreen-widget-0000000000000002",
-    "lockscreen-widget-0000000000000003",
-    "lockscreen-widget-0000000000000004"
+    "lockscreen-widget-0000000000000002"
 ]
 
     [lockscreen_widgets.grid]
@@ -216,7 +214,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -227,6 +225,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -243,7 +242,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -254,6 +253,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -270,7 +270,7 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
-        background_color = "surface_variant"
+        background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
         center_password_text = false
@@ -281,6 +281,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
@@ -371,7 +372,7 @@ video_directory = "/home/beepew/Pictures/Wallpapers/Animated"
 copy_to_wallpaper_dir = true
 
 [plugins]
-enabled = [ "thepunkoff/pomodoro", "aristides/udiskie", "noctalia/bongocat", "tadomika_ari/w-engine" ]
+enabled = [ "thepunkoff/pomodoro", "aristides/udiskie", "noctalia/mpvpaper", "noctalia/bongocat", "rsmendes/quick-alarm" ]
 
     [[plugins.source]]
     kind = "git"
@@ -473,7 +474,7 @@ time_format = "{:%I:%M}"
 
 [theme]
 builtin = "Ayu"
-community_palette = "Oxocarbon"
+community_palette = "Paradise"
 mode = "dark"
 pure_black_dark = false
 source = "wallpaper"
@@ -481,7 +482,7 @@ wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kitty", "qt" ]
-    community_ids = [ "pywalfox", "gimp", "prismlauncher", "fastfetch", "obs", "bat", "lazygit" ]
+    community_ids = [ "pywalfox", "gimp", "prismlauncher", "steam", "obs", "bat", "lazygit" ]
 
         [theme.templates.user.btop]
         input_path = "~/.config/noctalia/templates/btop.theme"
@@ -520,10 +521,10 @@ directory = "/home/beepew/Pictures/Wallpapers"
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Dreemurr.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
 
     [wallpaper.last]
-    path = "/home/beepew/.local/share/Steam/steamapps/workshop/content/431960/3356432625/preview.gif"
+    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
 
     [wallpaper.monitors.DP-1]
     path = "/home/beepew/.local/share/Steam/steamapps/workshop/content/431960/3356432625/preview.gif"
@@ -532,7 +533,7 @@ transition_on_startup = true
     path = "/home/beepew/.local/share/Steam/steamapps/workshop/content/431960/3356432625/preview.gif"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/beepew/Pictures/Wallpapers/Static/Deltarune/Ralsei Mirror.jpeg"
+    path = "/home/beepew/Pictures/Wallpapers/Cat/Kittyboard.png"
 
 [widget.audio_visualizer]
 bands = 30
