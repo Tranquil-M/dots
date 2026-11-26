@@ -109,7 +109,6 @@ tlp
 udisks2
 udiskie
 unzip
-webapp-manager
 wtype
 wl-clip-persist-git
 xournalpp
